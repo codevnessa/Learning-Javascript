@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MUNDI</title>
+</head>
+<body>
+    <h1>DE ONDE VOCE É???</h1>
+    <input type="text" id="txtbe"> <!-- Correção aqui -->
+    <input type="button" value="Verificar" onclick="pais()"> <!-- Correção aqui -->
+    <div id="txtdiv"></div>
+    <script>
+        function pais() {
+            var txtvar = document.getElementById('txtbe').value; // Obtenha o valor do input
+            var txtdiv = document.getElementById("txtdiv");
+            if (txtvar.toUpperCase() === 'BRASIL') { // Correção na comparação
+                console.log('BRASILEIRO');
+                txtdiv.textContent = 'Você é Brasileiro'; // Adiciona mensagem na div
+            } else {
+                console.log('ESTRANGEIRO');
+                txtdiv.textContent = 'Você é Estrangeiro'; // Adiciona mensagem na div
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TEUCU</title>
+</head>
+<body>
+    <H1>DE ONDE VOCE É???</H1>
+    <input type="text" id="txtbe" placeholder="Digite seu pais">
+    <input type="button" value="Verificar" onclick="verificarNacionalidade()" >
+    <div id="resultado"></div>
+    <script>
+        function verificarNacionalidade(){
+            var pais = document.getElementById('txtbe').value;
+            var resultado = document.getElementById("resultado")
+            if(pais === 'Brasil'){
+                console.log ('Brasileiro')
+                resultado.textContent = 'Você é Brasileiro';
+            }else{
+                console.log ('Estrangeiro')
+               resultado.textContent = 'Você é estrangeiro'
+            }
+        }
+
+    </script>
+</body>
+</html>

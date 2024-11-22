@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Borel&family=Oswald:wght@200&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+*{
+    padding: 0px;
+    margin:0px;
+}
+:root{
+    --cor1:  #e79f8b;
+    --cor2:  #ddc2ba;
+    --cor3:  #081947;
+    --cor4:  #556caa;
+}
+body{ 
+    font-family: "Borel", cursive;
+    text-align: justify;
+    background-color: #4e8ab3;
+}
+header{
+    font-family: "Borel", cursive;
+    text-align: center;
+}
+section{
+    border-radius: 15px;
+    margin: 20px auto 0px auto;
+    padding: 5px 15px;
+    background-color: rgb(221, 231, 231);
+    width: 400px;
+    box-shadow: 9px 8px 20px 2px #0000006e;
+}
+h1{
+
+}
+p{
+    padding: 15px 0px;
+    font-family: "Borel", cursive;
+}
+
+img{
+    margin: auto;
+    padding: 15px;
+    border-radius: 50% 50%;
+}
+div{
+    padding: 25px 15px;
+    box-shadow: 9px 8px 20px 2px #0000006e;
+    border-radius: 15px;
+    background-color: #ffffff;
+    margin: 15px;
+}
+footer{
+    text-align: center;
+}
