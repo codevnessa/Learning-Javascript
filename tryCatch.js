@@ -5,7 +5,7 @@ try {
 }catch(erro){
     console.log('[ERRO]')
     console.log(erro)
-    erroEncontrado = true
+    erroEncontrado = tru
 }finally{
     console.log('Finalizar software')
 }
