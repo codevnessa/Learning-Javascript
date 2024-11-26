@@ -1,0 +1,11 @@
+class TreeNode {
+    constructor(value) {
+        this.value = value;
+        this.left = null;
+        this.right = null;
+    }
+}
+
+let raiz = new TreeNode(10);
+raiz.left = new TreeNode(5);
+raiz.right = new TreeNode(15);
