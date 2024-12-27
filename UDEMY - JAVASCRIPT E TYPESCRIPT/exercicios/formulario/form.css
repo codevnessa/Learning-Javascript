@@ -1,0 +1,157 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilos gerais */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Estilos para o formulário */
+.form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form p {
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para labels */
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Estilos para inputs */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Estilos para botões */
+button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 0.5rem;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+button[type="reset"] {
+    background-color: #6c757d;
+}
+
+button[type="reset"]:hover {
+    background-color: #5a6268;
+}
+
+#resetAllButton {
+    background-color: #dc3545;
+    margin-top: 1rem;
+}
+
+#resetAllButton:hover {
+    background-color: #c82333;
+}
+
+/* Estilos para a área de resultado */
+.resultado {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+/* Estilos para o texto do resultado do IMC */
+#imcResultado {
+    font-weight: bold;
+    color: #007bff;
+}
+
+/* Classes para feedback visual do IMC */
+.abaixo-peso {
+    color: #ffc107; /* Amarelo */
+}
+
+.normal {
+    color: #28a745; /* Verde */
+}
+
+.sobrepeso {
+    color: #fd7e14; /* Laranja */
+}
+
+.obesidade {
+    color: #dc3545; /* Vermelho */
+}
+
+/* Estilo para a mensagem de classificação */
+#imcClassificacao {
+    font-weight: bold;
+    margin-left: 0.5rem;
+}
+
+/* Estilos para mensagens de erro */
+.erro {
+    color: #dc3545;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    input[type="text"],
+    input[type="number"],
+    button {
+        font-size: 0.9rem;
+    }
+}
