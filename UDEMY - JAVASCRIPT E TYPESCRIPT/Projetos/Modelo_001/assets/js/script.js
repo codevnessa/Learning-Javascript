@@ -1,65 +1,32 @@
-// Selecionar o formulário
-const form = document.querySelector('form');
+ // Criar um array de objetos
+ // Cada objetos tem duas propriedades tag(o tipo de element, etc.)e text(o texto que vai dentro do elemento)
+const elementos = [
+    {tag: 'p', text: 'Vanessa Rosa Ferreira Cruz'},
+    {tag: 'div', text: 'Frase 2'},
+    {tag: 'section', text: 'Frase 3'},
+    {tag: 'footer', text: 'Frase 4'}
+];
 
-// Função para exibir mensagens de erro
-function mostrarErro(campo, mensagem) {
-    const erro = document.createElement('div');
-    erro.className = 'erro';
-    erro.textContent = mensagem;
-    campo.parentNode.insertBefore(erro, campo.nextSibling);
+// Seleciona o local da pagina onde vai ser inserido os elementos criados
+// Usar o document.querySelector para selecionar um elemento com a classe container
+const container = document.querySelector('.container')
+
+// Criar uma div que vai agrupar todos os elementos
+const div = document.createElement('div')
+
+// Usar um loop for para percorrer cada objeto no arrays elementos
+// Para cada obnjeto, criamos o elemento HTML na propriedade tag e adicionar o texto na propriedade text
+// E assim adicionar o elemento criado dentro da div que foi criada
+for(let i = 0; i < elementos.length; i++){
+    const {tag, text} = elementos[i]; // Desestruturação do objeto
+    const elementoCriado = document.createElement(tag);
+    elementoCriado.innerText = text; // Adiciona o texto ao elemento
+    div.appendChild(elementoCriado); // adiciona o elemento á div
 }
 
-// Função para limpar mensagens de erro
-function limparErros() {
-    const erros = document.querySelectorAll('.erro');
-    erros.forEach(erro => erro.remove());
-}
+// Adicionar a div, que agora tem todos os elemntos criado ao conteiner que foi selecionado inicio
+container.appendChild(div);
 
-// Função para validar o formulário
-function validarFormulario(event) {
-    event.preventDefault(); // Impedir o envio do formulário
-
-    limparErros(); // Limpar erros anteriores
-
-    // Selecionar os campos
-    const nome = document.getElementById('nome');
-    const numero = document.getElementById('numero');
-    const email = document.getElementById('email');
-    const senha = document.getElementById('senha');
-
-    let valido = true;
-
-    // Validar nome
-    if (nome.value.trim() === '') {
-        mostrarErro(nome, 'Por favor, insira seu nome.');
-        valido = false;
-    }
-
-    // Validar número
-    if (numero.value.trim() === '') {
-        mostrarErro(numero, 'Por favor, insira seu número.');
-        valido = false;
-    }
-
-    // Validar email
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value.trim())) {
-        mostrarErro(email, 'Por favor, insira um email válido.');
-        valido = false;
-    }
-
-    // Validar senha
-    if (senha.value.trim().length < 6) {
-        mostrarErro(senha, 'A senha deve ter pelo menos 6 caracteres.');
-        valido = false;
-    }
-
-    // Se o formulário for válido, exibir mensagem de sucesso
-    if (valido) {
-        alert('Formulário enviado com sucesso!');
-        form.reset(); // Limpar o formulário
-    }
-}
-
-// Adicionar evento de submit ao formulário
-form.addEventListener('submit', validarFormulario);
+// Quando  executar esse código, ele vai criar os elementos HTML 
+// especificados no array elementos,adicionar o texto dentro deles 
+// e inserir tudo dentro de uma div que será adicionada ao contêiner na página
