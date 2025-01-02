@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Formulário de cadastro completo para informações pessoais, profissionais e acadêmicas.">
+    <title>Formulário de Cadastro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <form id="meuFormulario">
+        <!-- Seção: Informações Pessoais -->
+        <fieldset>
+            <legend>Informações Pessoais</legend>
+
+            <label for="nomeCompleto">Nome completo:</label>
+            <input type="text" id="nomeCompleto" name="nomeCompleto" required placeholder="Digite seu nome completo">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+            <span id="emailError" class="error" aria-live="polite"></span>
+
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required placeholder="Digite seu telefone">
+
+            <label for="dataNascimento">Data de nascimento:</label>
+            <input type="date" id="dataNascimento" name="dataNascimento" required>
+
+            <label for="genero">Gênero (opcional):</label>
+            <select id="genero" name="genero">
+                <option value="">Selecione</option>
+                <option value="masculino">Masculino</option>
+                <option value="feminino">Feminino</option>
+                <option value="outro">Outro</option>
+                <option value="naoInformar">Prefiro não informar</option>
+            </select>
+
+            <label for="cep">CEP:</label>
+            <input type="text" id="cep" name="cep" required placeholder="Digite seu CEP">
+
+            <label for="endereco">Endereço (rua, número, complemento):</label>
+            <input type="text" id="endereco" name="endereco" required placeholder="Digite seu endereço">
+
+            <label for="cidade">Cidade:</label>
+            <input type="text" id="cidade" name="cidade" required placeholder="Digite sua cidade">
+
+            <label for="estado">Estado/Província:</label>
+            <input type="text" id="estado" name="estado" required placeholder="Digite seu estado">
+
+            <label for="pais">País:</label>
+            <input type="text" id="pais" name="pais" required placeholder="Digite seu país">
+        </fieldset>
+
+        <!-- Seção: Informações de Login/Cadastro -->
+        <fieldset>
+            <legend>Informações de Login/Cadastro</legend>
+
+            <label for="usuario">Nome de usuário (opcional):</label>
+            <input type="text" id="usuario" name="usuario" placeholder="Digite um nome de usuário">
+
+            <label for="senha">Senha (opcional):</label>
+            <input type="password" id="senha" name="senha" placeholder="Digite uma senha">
+
+            <label for="confirmarSenha">Confirmação de senha (opcional):</label>
+            <input type="password" id="confirmarSenha" name="confirmarSenha" placeholder="Confirme sua senha">
+        </fieldset>
+
+        <!-- Seção: Formação Acadêmica -->
+        <fieldset>
+            <legend>Formação Acadêmica</legend>
+
+            <label for="instituicao">Instituição de ensino:</label>
+            <input type="text" id="instituicao" name="instituicao" required placeholder="Digite o nome da instituição">
+
+            <label for="curso">Curso:</label>
+            <input type="text" id="curso" name="curso" required placeholder="Digite o nome do curso">
+
+            <label for="anoConclusao">Ano de conclusão ou previsão:</label>
+            <input type="text" id="anoConclusao" name="anoConclusao" required placeholder="Ex.: 2023">
+
+            <label for="certificados">Certificados ou diplomas (opcional):</label>
+            <input type="file" id="certificados" name="certificados">
+        </fieldset>
+
+        <!-- Seção: Experiência Profissional -->
+        <fieldset>
+            <legend>Experiência Profissional</legend>
+
+            <label for="empresa">Empresa:</label>
+            <input type="text" id="empresa" name="empresa" placeholder="Digite o nome da empresa">
+
+            <label for="cargo">Cargo:</label>
+            <input type="text" id="cargo" name="cargo" placeholder="Digite o cargo ocupado">
+
+            <label for="areaAtuacao">Área de atuação:</label>
+            <input type="text" id="areaAtuacao" name="areaAtuacao" placeholder="Digite a área de atuação">
+
+            <label for="periodo">Período de atuação:</label>
+            <input type="text" id="periodo" name="periodo" placeholder="Ex.: Jan/2020 - Dez/2022">
+
+            <label for="responsabilidades">Descrição das responsabilidades:</label>
+            <textarea id="responsabilidades" name="responsabilidades" rows="4" placeholder="Descreva suas responsabilidades"></textarea>
+        </fieldset>
+
+        <!-- Seção: Habilidades e Competências -->
+        <fieldset>
+            <legend>Habilidades e Competências</legend>
+
+            <label for="habilidades">Habilidades técnicas:</label>
+            <input type="text" id="habilidades" name="habilidades" placeholder="Ex.: Java, SQL, React">
+
+            <label for="idiomas">Idiomas:</label>
+            <input type="text" id="idiomas" name="idiomas" placeholder="Ex.: Inglês, Espanhol">
+
+            <label for="certificacoes">Certificações (se houver):</label>
+            <input type="text" id="certificacoes" name="certificacoes" placeholder="Ex.: AWS Certified, Scrum Master">
+        </fieldset>
+
+        <!-- Seção: Informações Adicionais -->
+        <fieldset>
+            <legend>Informações Adicionais</legend>
+
+            <label for="portfolio">Link para portfólio (se houver):</label>
+            <input type="url" id="portfolio" name="portfolio" placeholder="Ex.: https://meuportfolio.com">
+
+            <label for="redesSociais">Redes sociais profissionais:</label>
+            <input type="text" id="redesSociais" name="redesSociais" placeholder="Ex.: LinkedIn, GitHub">
+
+            <label for="objetivo">Mensagem ou objetivo profissional:</label>
+            <textarea id="objetivo" name="objetivo" rows="4" placeholder="Descreva seu objetivo profissional"></textarea>
+        </fieldset>
+
+        <!-- Seção: Preferências de Trabalho -->
+        <fieldset>
+            <legend>Preferências de Trabalho</legend>
+
+            <label for="areaInteresse">Área de interesse:</label>
+            <input type="text" id="areaInteresse" name="areaInteresse" placeholder="Ex.: Desenvolvimento de Software, QA">
+
+            <label for="disponibilidade">Disponibilidade para início:</label>
+            <input type="text" id="disponibilidade" name="disponibilidade" placeholder="Ex.: Imediato, 1 mês">
+
+            <label for="tipoTrabalho">Tipo de trabalho preferido:</label>
+            <select id="tipoTrabalho" name="tipoTrabalho">
+                <option value="">Selecione</option>
+                <option value="remoto">Remoto</option>
+                <option value="hibrido">Híbrido</option>
+                <option value="presencial">Presencial</option>
+            </select>
+        </fieldset>
+
+        <!-- Seção: Referências Profissionais -->
+        <fieldset>
+            <legend>Referências Profissionais (opcional)</legend>
+
+            <label for="referenciaNome">Nome e cargo:</label>
+            <input type="text" id="referenciaNome" name="referenciaNome" placeholder="Digite o nome e cargo">
+
+            <label for="referenciaEmpresa">Empresa:</label>
+            <input type="text" id="referenciaEmpresa" name="referenciaEmpresa" placeholder="Digite o nome da empresa">
+
+            <label for="referenciaContato">Telefone ou e-mail para contato:</label>
+            <input type="text" id="referenciaContato" name="referenciaContato" placeholder="Digite o contato">
+        </fieldset>
+
+        <!-- Seção: Outras Informações -->
+        <fieldset>
+            <legend>Outras Informações (opcional)</legend>
+
+            <label for="alergias">Alergias (se aplicável):</label>
+            <input type="text" id="alergias" name="alergias" placeholder="Descreva suas alergias">
+
+            <label for="medicamentos">Medicamentos em uso (se aplicável):</label>
+            <input type="text" id="medicamentos" name="medicamentos" placeholder="Descreva os medicamentos">
+        </fieldset>
+
+        <form id="meuFormulario">
+            <div class="botoes">
+                <button type="reset">Limpar</button>
+                <button type="button" id="gerarPdf">Gerar PDF</button>
+            </div>
+        </form>
+    </form>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
