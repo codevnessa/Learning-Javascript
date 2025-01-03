@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --colorprincipal: #6C63FF; 
+    --colortext: #2F2E41;
+    --colorhover: #918fc0; 
+    --colorbackground: #F9F9F9; 
+    --colorshadow: rgba(0, 0, 0, 0.1);
+    --colorbuttontext: #050505; 
+}
+
+/* Estilos gerais */
+body {
+    background: linear-gradient(135deg, var(--colorprincipal), #4A47A3);
+    color: var(--colortext);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Poppins', sans-serif; 
+    line-height: 1.6;
+}
+
+.container {
+    background-color: var(--colorbackground);
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+/* Títulos */
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2.5em;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--colorprincipal);
+}
+
+/* Relógio e Data */
+.clock, .date {
+    text-align: center;
+    font-size: 2.2em;
+    color: var(--colortext);
+    font-weight: 500;
+    margin: 1rem 0;
+}
+
+.clock {
+    font-size: 2em;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--colorprincipal); 
+}
+
+.date {
+    font-size: 1.8em;
+    color: #666;
+}
+
+/* Botões */
+button {
+    color: var(--colorbuttontext);
+    background-color: var(--colorbutton);
+    width: 100px;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 1em;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 0 0.5rem;
+}
+
+button:hover {
+    background-color: var(--colorhoverbutton);
+    transform: scale(1.01);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+
+/* Container dos botões */
+.buttons-clock {
+    display: flex;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+button.start:hover{
+    background-color: #cbdcd1;
+}
+button.stop:hover{
+    background-color: #d4b4b4;
+}
+button.pause:hover{
+    background-color: #d8dac7;
+}
+
+
+.start{
+    color: #5ac583;
+}
+.stop{
+    color: #df6e6e;
+}
+.pause{
+    color: #d1dc71;
+}
